@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi Page Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        input {
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Multi-Page Form</h2>
+
+<div id="page1" class="page active">
+    <h3>Page 1</h3>
+
+    <input type="text" id="name" placeholder="Enter name">
+    <br>
+
+    <input type="text" id="course" placeholder="Enter course">
+    <br>
+
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<div id="page2" class="page">
+    <h3>Page 2</h3>
+
+    <input type="email" id="email" placeholder="Enter email">
+    <br>
+
+    <button onclick="previousPage()">Previous</button>
+    <button onclick="submitForm()">Submit</button>
+</div>
+
+<p id="result"></p>
+
+<script>
+function nextPage() {
+    sessionStorage.setItem(
+        "name",
+        document.getElementById("name").value
+    );
+
+    sessionStorage.setItem(
+        "course",
+        document.getElementById("course").value
+    );
+
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+
+function previousPage() {
+    document.getElementById("page2").classList.remove("active");
+    document.getElementById("page1").classList.add("active");
+}
+
+function submitForm() {
+    sessionStorage.setItem(
+        "email",
+        document.getElementById("email").value
+    );
+
+    let name = sessionStorage.getItem("name");
+    let course = sessionStorage.getItem("course");
+    let email = sessionStorage.getItem("email");
+
+    document.getElementById("result").innerHTML =
+        "Name: " + name +
+        "<br>Course: " + course +
+        "<br>Email: " + email;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

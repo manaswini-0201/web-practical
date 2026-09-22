@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Complete Responsive Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: lightblue;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            padding: 25px;
+            background: #eee;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 700px) {
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Responsive Website</h1>
+    <p>HTML & CSS Practical Project</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+
+    <h1>Welcome!</h1>
+
+    <p>
+        This is a complete responsive webpage created using HTML and CSS.
+    </p>
+
+</section>
+
+<section class="content">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Creates the structure of webpages.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Provides design and responsive layouts.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Adds interaction and functionality.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Web Technology Practical</p>
+</footer>
+
+<center>
+    <br>
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+    <br><br>
+</center>
+
+</body>
+</html>

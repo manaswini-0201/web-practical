@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vowels and Consonants</title>
+</head>
+<body>
+
+<h2>Vowels and Consonants</h2>
+
+<input type="text" id="text">
+<button onclick="count()">Count</button>
+
+<p id="output"></p>
+
+<script>
+function count() {
+    let text = document.getElementById("text").value.toLowerCase();
+    let vowels = 0;
+    let consonants = 0;
+
+    for (let ch of text) {
+        if ("aeiou".includes(ch)) {
+            vowels++;
+        } else if (ch >= "a" && ch <= "z") {
+            consonants++;
+        }
+    }
+
+    document.getElementById("output").innerHTML =
+        "Vowels: " + vowels + "<br>" +
+        "Consonants: " + consonants;
+}
+</script>
+
+</body>
+</html>

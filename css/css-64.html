@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile First Design</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            padding: 15px;
+        }
+
+        .card {
+            background: #eee;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        @media (min-width: 700px) {
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+
+            .card {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>Structure of webpages.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>Design and styling.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>Webpage functionality.</p>
+    </div>
+
+</div>
+
+<center>
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+</center>
+
+</body>
+</html>

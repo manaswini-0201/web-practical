@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Dropdown</title>
+</head>
+<body>
+
+<h2>Dynamic Dropdown</h2>
+
+<select id="course"></select>
+
+<script>
+let courses = [
+    "Computer Science",
+    "Artificial Intelligence",
+    "Data Science",
+    "Web Development"
+];
+
+let dropdown = document.getElementById("course");
+
+for (let course of courses) {
+    let option = document.createElement("option");
+
+    option.text = course;
+    dropdown.add(option);
+}
+</script>
+
+</body>
+</html>

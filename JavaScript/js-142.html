@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Application</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student CRUD Application</h2>
+
+<input type="text" id="name" placeholder="Enter student name">
+<input type="number" id="marks" placeholder="Enter marks">
+
+<button onclick="saveStudent()">Save</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="table"></tbody>
+</table>
+
+<script>
+let students =
+    JSON.parse(localStorage.getItem("crudStudents")) || [];
+
+let editIndex = -1;
+
+function saveStudent() {
+    let name = document.getElementById("name").value;
+    let marks = document.getElementById("marks").value;
+
+    if (name == "" || marks == "") {
+        alert("Please enter all details");
+        return;
+    }
+
+    if (editIndex == -1) {
+        students.push({
+            name: name,
+            marks: marks
+        });
+    } else {
+        students[editIndex] = {
+            name: name,
+            marks: marks
+        };
+
+        editIndex = -1;
+    }
+
+    localStorage.setItem(
+        "crudStudents",
+        JSON.stringify(students)
+    );
+
+    document.getElementById("name").value = "";
+    document.getElementById("marks").value = "";
+
+    displayStudents();
+}
+
+function displayStudents() {
+    let table = document.getElementById("table");
+
+    table.innerHTML = "";
+
+    students.forEach(function(student, index) {
+        let row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + student.name + "</td>" +
+            "<td>" + student.marks + "</td>" +
+            "<td>" +
+            "<button onclick='editStudent(" + index + ")'>Edit</button>" +
+            "<button onclick='deleteStudent(" + index + ")'>Delete</button>" +
+            "</td>";
+
+        table.appendChild(row);
+    });
+}
+
+function editStudent(index) {
+    document.getElementById("name").value =
+        students[index].name;
+
+    document.getElementById("marks").value =
+        students[index].marks;
+
+    editIndex = index;
+}
+
+function deleteStudent(index) {
+    students.splice(index, 1);
+
+    localStorage.setItem(
+        "crudStudents",
+        JSON.stringify(students)
+    );
+
+    displayStudents();
+}
+
+displayStudents();
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

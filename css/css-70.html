@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Only Modal</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 80px;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-box {
+            background: white;
+            width: 300px;
+            padding: 30px;
+            margin: 150px auto;
+            border-radius: 10px;
+        }
+
+        #open:target {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS-only Modal</h1>
+
+<a class="button" href="#open">Open Modal</a>
+
+<div class="modal" id="open">
+
+    <div class="modal-box">
+        <h2>Hello!</h2>
+        <p>This modal works without JavaScript.</p>
+
+        <a href="#">Close</a>
+    </div>
+
+</div>
+
+<br><br><br>
+
+<a href="index.html">← CSS Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Duplicates</title>
+</head>
+<body>
+
+<h2>Remove Duplicate Elements</h2>
+<p id="output"></p>
+
+<script>
+let arr = [10, 20, 10, 30, 20, 40];
+
+let result = [...new Set(arr)];
+
+document.getElementById("output").innerHTML =
+    "Original: " + arr + "<br>" +
+    "Without Duplicates: " + result;
+</script>
+
+</body>
+</html>

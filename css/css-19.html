@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 19 - Responsive Navigation</title>
+
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #222;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Navigation Bar</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <p>Resize the browser to see the navigation change.</p>
+
+    <br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

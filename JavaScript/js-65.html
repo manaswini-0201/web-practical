@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Frequency</title>
+</head>
+<body>
+
+<h2>Character Frequency</h2>
+
+<input type="text" id="text">
+<button onclick="count()">Count</button>
+
+<p id="output"></p>
+
+<script>
+function count() {
+    let text = document.getElementById("text").value;
+    let frequency = {};
+
+    for (let ch of text) {
+        frequency[ch] = (frequency[ch] || 0) + 1;
+    }
+
+    document.getElementById("output").innerHTML =
+        JSON.stringify(frequency);
+}
+</script>
+
+</body>
+</html>

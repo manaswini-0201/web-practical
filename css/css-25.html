@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 25 - Complete Homepage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: lightblue;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            width: 200px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+        <p>Welcome to my homepage</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome!</h2>
+        <p>This is a complete responsive homepage.</p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Learn webpage structure.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Learn webpage styling.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Learn webpage interaction.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+    <br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 26 - Inheritance and Specificity</title>
+
+    <style>
+        body {
+            color: blue;
+            font-family: Arial;
+        }
+
+        p {
+            color: green;
+        }
+
+        .special {
+            color: orange;
+        }
+
+        #important {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Inheritance and Specificity</h1>
+
+    <p>This paragraph gets its color from the p selector.</p>
+
+    <p class="special">
+        Class selector has higher specificity than the element selector.
+    </p>
+
+    <p id="important">
+        ID selector has higher specificity.
+    </p>
+
+    <br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+</head>
+
+<body>
+
+<h1>Fibonacci Series</h1>
+
+<script>
+
+    let n = 10;
+    let first = 0;
+    let second = 1;
+
+    document.write(first + " " + second + " ");
+
+    for (let i = 2; i < n; i++) {
+
+        let next = first + second;
+
+        document.write(next + " ");
+
+        first = second;
+        second = next;
+    }
+
+</script>
+
+<br><br>
+
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

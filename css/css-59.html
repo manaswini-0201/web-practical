@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Blog Grid</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #eee;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        article {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        article h2 {
+            color: #333;
+        }
+
+        @media (max-width: 700px) {
+            .news {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Daily News Blog</h1>
+
+<div class="news">
+
+    <article>
+        <h2>Technology</h2>
+        <p>Latest developments in modern technology.</p>
+    </article>
+
+    <article>
+        <h2>Education</h2>
+        <p>New ideas and opportunities for students.</p>
+    </article>
+
+    <article>
+        <h2>Travel</h2>
+        <p>Interesting places to explore and visit.</p>
+    </article>
+
+    <article>
+        <h2>Sports</h2>
+        <p>Updates from the world of sports.</p>
+    </article>
+
+</div>
+
+<center>
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+</center>
+
+</body>
+</html>

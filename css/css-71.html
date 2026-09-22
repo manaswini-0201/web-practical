@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark Mode CSS Variables</title>
+
+    <style>
+        :root {
+            --background: white;
+            --text: black;
+            --box: #eeeeee;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .dark {
+            --background: #222;
+            --text: white;
+            --box: #444;
+        }
+
+        .box {
+            background: var(--box);
+            padding: 40px;
+            margin: 50px auto;
+            max-width: 400px;
+        }
+
+        .dark-mode {
+            background: #222;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Dark Mode using CSS Variables</h1>
+
+<div class="box">
+    <h2>CSS Variables</h2>
+    <p>Colors are controlled using custom properties.</p>
+</div>
+
+<p>Example dark theme:</p>
+
+<div class="dark-mode">
+    Dark Mode Preview
+</div>
+
+<br>
+
+<a href="index.html">← CSS Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

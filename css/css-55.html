@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 55 - College Homepage</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #444;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: lightblue;
+        }
+
+        .sections {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid gray;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .sections {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>ABC College</h1>
+
+        <p>Knowledge • Innovation • Excellence</p>
+
+    </header>
+
+    <nav>
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Admissions</a>
+        <a href="#">Contact</a>
+
+    </nav>
+
+    <section class="hero">
+
+        <h2>Welcome to ABC College</h2>
+
+        <p>
+            A simple responsive college homepage.
+        </p>
+
+    </section>
+
+    <section class="sections">
+
+        <div class="card">
+
+            <h2>Courses</h2>
+
+            <p>Explore different courses.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Campus</h2>
+
+            <p>Learn about our campus.</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Events</h2>
+
+            <p>View upcoming college events.</p>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 ABC College</p>
+
+    </footer>
+
+    <br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

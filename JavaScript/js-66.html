@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regular Expression</title>
+</head>
+<body>
+
+<h2>Regular Expression</h2>
+
+<input type="text" id="text" placeholder="Enter digits">
+<button onclick="check()">Check</button>
+
+<p id="output"></p>
+
+<script>
+function check() {
+    let text = document.getElementById("text").value;
+
+    let pattern = /^[0-9]+$/;
+
+    if (pattern.test(text)) {
+        document.getElementById("output").innerHTML =
+            "Only numbers are entered.";
+    } else {
+        document.getElementById("output").innerHTML =
+            "Invalid input.";
+    }
+}
+</script>
+
+</body>
+</html>

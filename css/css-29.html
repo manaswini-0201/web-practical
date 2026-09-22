@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 29 - CSS Variables</title>
+
+    <style>
+        :root {
+            --main-color: blue;
+            --box-padding: 20px;
+        }
+
+        h1 {
+            color: var(--main-color);
+        }
+
+        .box {
+            color: var(--main-color);
+            padding: var(--box-padding);
+            border: 2px solid var(--main-color);
+        }
+
+        button {
+            background: var(--main-color);
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Variables</h1>
+
+    <div class="box">
+        This box uses CSS variables.
+    </div>
+
+    <br>
+
+    <button>Button</button>
+
+    <br><br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

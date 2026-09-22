@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Rows</title>
+</head>
+<body>
+
+<h2>Student Table</h2>
+
+<table border="1" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Action</th>
+    </tr>
+</table>
+
+<br>
+
+<input type="text" id="name" placeholder="Enter name">
+<button onclick="addRow()">Add</button>
+
+<script>
+function addRow() {
+    let name = document.getElementById("name").value;
+
+    let table = document.getElementById("table");
+    let row = table.insertRow();
+
+    row.insertCell(0).innerHTML = name;
+
+    row.insertCell(1).innerHTML =
+        "<button onclick='this.parentElement.parentElement.remove()'>Delete</button>";
+}
+</script>
+
+</body>
+</html>

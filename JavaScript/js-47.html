@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Webpage</title>
+</head>
+<body>
+
+<h2 id="title">Welcome!</h2>
+
+<button onclick="changeText()">Change Text</button>
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeText() {
+    document.getElementById("title").innerHTML =
+        "JavaScript is Interactive!";
+}
+
+function changeColor() {
+    document.body.style.backgroundColor = "lightblue";
+}
+</script>
+
+</body>
+</html>

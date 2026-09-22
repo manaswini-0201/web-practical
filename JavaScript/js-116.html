@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geographical Coordinates</title>
+</head>
+<body>
+
+<h2>Current Geographical Coordinates</h2>
+
+<button onclick="getCoordinates()">Get Coordinates</button>
+
+<p id="result"></p>
+
+<script>
+function getCoordinates() {
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+
+        document.getElementById("result").innerHTML =
+            "Latitude: " + latitude +
+            "<br>Longitude: " + longitude;
+
+    });
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS calc()</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+
+        .box {
+            width: calc(100% - 40px);
+            margin: 20px;
+            padding: 30px;
+            box-sizing: border-box;
+            background: lightblue;
+            text-align: center;
+        }
+
+        .column {
+            width: calc(50% - 20px);
+            margin: 10px;
+            padding: 30px;
+            box-sizing: border-box;
+            background: #eee;
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            .column {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS calc() Function</h1>
+
+<div class="box">
+    Width = calc(100% - 40px)
+</div>
+
+<div class="column">
+    Column 1
+</div>
+
+<div class="column">
+    Column 2
+</div>
+
+<br><br>
+
+<center>
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+</center>
+
+</body>
+</html>

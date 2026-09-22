@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 18 - Animation</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
+            position: relative;
+            animation: moveBox 3s infinite;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 0;
+            }
+
+            50% {
+                left: 200px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation</h1>
+
+    <div class="box"></div>
+
+    <br><br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

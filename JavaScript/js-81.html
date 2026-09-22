@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dependent Dropdown</title>
+</head>
+<body>
+
+<h2>Country → State → City</h2>
+
+<select id="country" onchange="showStates()">
+    <option value="">Select Country</option>
+    <option value="india">India</option>
+    <option value="usa">USA</option>
+</select>
+
+<br><br>
+
+<select id="state" onchange="showCities()">
+    <option value="">Select State</option>
+</select>
+
+<br><br>
+
+<select id="city">
+    <option value="">Select City</option>
+</select>
+
+<script>
+let data = {
+    india: {
+        TamilNadu: ["Chennai", "Madurai"],
+        Karnataka: ["Bangalore", "Mysore"]
+    },
+
+    usa: {
+        California: ["Los Angeles", "San Francisco"],
+        Texas: ["Houston", "Dallas"]
+    }
+};
+
+function showStates() {
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state");
+
+    state.innerHTML = "<option value=''>Select State</option>";
+
+    if (country) {
+        for (let s in data[country]) {
+            state.innerHTML +=
+                "<option value='" + s + "'>" + s + "</option>";
+        }
+    }
+
+    document.getElementById("city").innerHTML =
+        "<option value=''>Select City</option>";
+}
+
+function showCities() {
+    let country = document.getElementById("country").value;
+    let state = document.getElementById("state").value;
+    let city = document.getElementById("city");
+
+    city.innerHTML = "<option value=''>Select City</option>";
+
+    if (state) {
+        for (let c of data[country][state]) {
+            city.innerHTML +=
+                "<option>" + c + "</option>";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

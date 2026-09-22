@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation</title>
+</head>
+<body>
+
+<h2>Browser Geolocation</h2>
+
+<button onclick="getLocation()">Get Location</button>
+
+<p id="result"></p>
+
+<script>
+function getLocation() {
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                document.getElementById("result").innerHTML =
+                    "Location permission granted.";
+            },
+            function() {
+                document.getElementById("result").innerHTML =
+                    "Location permission denied.";
+            }
+        );
+
+    }
+    else {
+        document.getElementById("result").innerHTML =
+            "Geolocation is not supported.";
+    }
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+</head>
+<body>
+
+<h2>Feedback Form</h2>
+
+<form onsubmit="return feedback()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Rating:
+    <select id="rating">
+        <option value="">Select Rating</option>
+        <option>Excellent</option>
+        <option>Good</option>
+        <option>Average</option>
+        <option>Poor</option>
+    </select>
+
+    <br><br>
+
+    Feedback:
+    <br>
+    <textarea id="feedback"></textarea>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+function feedback() {
+
+    let name = document.getElementById("name").value;
+    let rating = document.getElementById("rating").value;
+    let text = document.getElementById("feedback").value;
+
+    if (name == "" || rating == "" || text == "") {
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+    }
+    else {
+        document.getElementById("message").innerHTML =
+            "Thank you for your feedback!";
+    }
+
+    return false;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

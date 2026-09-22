@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+
+    <style>
+        #clock {
+            font-size: 40px;
+            font-family: monospace;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Digital Clock</h1>
+
+<div id="clock"></div>
+
+<script>
+function showTime() {
+    let time = new Date();
+
+    document.getElementById("clock").innerHTML =
+        time.toLocaleTimeString();
+}
+
+setInterval(showTime, 1000);
+
+showTime();
+</script>
+
+<br>
+
+<center>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+</center>
+
+</body>
+</html>

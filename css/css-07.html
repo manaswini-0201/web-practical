@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 07 - Positioning</title>
+
+    <style>
+        .container {
+            position: relative;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .static {
+            position: static;
+            background: lightblue;
+            padding: 10px;
+        }
+
+        .relative {
+            position: relative;
+            left: 30px;
+            background: lightgreen;
+            padding: 10px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            background: lightcoral;
+            padding: 10px;
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: orange;
+            padding: 10px;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: yellow;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning</h1>
+
+    <div class="sticky">Sticky Element</div>
+
+    <div class="container">
+
+        <div class="static">Static</div>
+
+        <div class="relative">Relative</div>
+
+        <div class="absolute">Absolute</div>
+
+    </div>
+
+    <div class="fixed">Fixed</div>
+
+    <p>Scroll the page to observe the positioning.</p>
+    <p style="height:500px;"></p>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

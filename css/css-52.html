@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS 52 - Responsive Footer</title>
+
+    <style>
+        footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            background: #222;
+            color: white;
+        }
+
+        footer div {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Footer</h1>
+
+    <p>Resize the browser window to test the footer.</p>
+
+    <footer>
+
+        <div>
+            <h3>About</h3>
+            <p>My Website</p>
+        </div>
+
+        <div>
+            <h3>Links</h3>
+            <p>Home | About</p>
+        </div>
+
+        <div>
+            <h3>Contact</h3>
+            <p>example@email.com</p>
+        </div>
+
+    </footer>
+
+    <br>
+
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form onsubmit="return login()">
+
+    Username:
+    <input type="text" id="username">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+function login() {
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+
+    if (username == "" || password == "") {
+        document.getElementById("message").innerHTML =
+            "Username and password are required.";
+    }
+    else if (username == "student" && password == "1234") {
+        document.getElementById("message").innerHTML =
+            "Login Successful!";
+    }
+    else {
+        document.getElementById("message").innerHTML =
+            "Invalid username or password.";
+    }
+
+    return false;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

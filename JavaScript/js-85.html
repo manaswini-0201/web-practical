@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Events</title>
+</head>
+<body>
+
+<h2>Form Events</h2>
+
+<form id="myForm">
+    <input type="text" id="name" placeholder="Enter your name">
+    <br><br>
+
+    <select id="course">
+        <option>Select Course</option>
+        <option>Web Development</option>
+        <option>AI</option>
+        <option>Data Science</option>
+    </select>
+
+    <br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+let name = document.getElementById("name");
+
+name.onfocus = function() {
+    name.style.backgroundColor = "lightyellow";
+};
+
+name.onblur = function() {
+    name.style.backgroundColor = "white";
+};
+
+document.getElementById("course").onchange = function() {
+    document.getElementById("result").innerHTML =
+        "Course selected: " + this.value;
+};
+
+document.getElementById("myForm").onsubmit = function(event) {
+    event.preventDefault();
+    document.getElementById("result").innerHTML = "Form Submitted!";
+};
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

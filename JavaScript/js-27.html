@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+<h1>Simple Calculator</h1>
+
+<input id="num1" type="number" placeholder="First number">
+<br><br>
+
+<input id="num2" type="number" placeholder="Second number">
+<br><br>
+
+<button onclick="calculate('+')">+</button>
+<button onclick="calculate('-')">-</button>
+<button onclick="calculate('*')">*</button>
+<button onclick="calculate('/')">/</button>
+
+<h3 id="result"></h3>
+
+<script>
+function calculate(operator) {
+
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+    let result;
+
+    if (operator === "+") {
+        result = a + b;
+    }
+    else if (operator === "-") {
+        result = a - b;
+    }
+    else if (operator === "*") {
+        result = a * b;
+    }
+    else {
+        result = a / b;
+    }
+
+    document.getElementById("result").innerHTML =
+        "Result = " + result;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

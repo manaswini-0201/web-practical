@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table</title>
+</head>
+<body>
+
+<h2>Dynamic Table</h2>
+
+<div id="table"></div>
+
+<script>
+let students = [
+    ["Name", "Age"],
+    ["Lakshmi", 18],
+    ["Anu", 19],
+    ["Riya", 18]
+];
+
+let table = "<table border='1'>";
+
+for (let row of students) {
+    table += "<tr>";
+
+    for (let cell of row) {
+        table += "<td>" + cell + "</td>";
+    }
+
+    table += "</tr>";
+}
+
+table += "</table>";
+
+document.getElementById("table").innerHTML = table;
+</script>
+
+</body>
+</html>

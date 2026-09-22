@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Template Areas</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .page {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 300px 60px;
+        }
+
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background: #ddd;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: main;
+            padding: 20px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <header>
+        <h2>My Website</h2>
+    </header>
+
+    <aside>
+        <h3>Menu</h3>
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+    </aside>
+
+    <main>
+        <h2>Welcome</h2>
+        <p>This page demonstrates CSS Grid Template Areas.</p>
+    </main>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</div>
+
+<center>
+    <br>
+    <a href="index.html">← CSS Programs</a>
+    <br><br>
+    <a href="../index.html">Home</a>
+</center>
+
+</body>
+</html>
