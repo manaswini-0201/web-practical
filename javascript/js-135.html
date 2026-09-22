@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>localStorage vs sessionStorage</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h2>localStorage vs sessionStorage</h2>
+
+<button onclick="saveData()">Save Data</button>
+<button onclick="showData()">Show Data</button>
+
+<p id="result"></p>
+
+<script>
+function saveData() {
+    localStorage.setItem("localData", "Saved permanently");
+    sessionStorage.setItem("sessionData", "Saved for this session");
+
+    alert("Data saved!");
+}
+
+function showData() {
+    let localData = localStorage.getItem("localData");
+    let sessionData = sessionStorage.getItem("sessionData");
+
+    document.getElementById("result").innerHTML =
+        "localStorage: " + localData +
+        "<br>sessionStorage: " + sessionData;
+}
+</script>
+
+<br><br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

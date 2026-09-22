@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+
+<h2>Callback Example</h2>
+<p id="output"></p>
+
+<script>
+function message(name, callback) {
+    callback("Hello " + name);
+}
+
+function display(text) {
+    document.getElementById("output").innerHTML = text;
+}
+
+message("Lakshmi", display);
+</script>
+
+</body>
+</html>

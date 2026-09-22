@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferred Font Size</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h2>Preferred Font Size</h2>
+
+<p id="text">This text changes according to your selected font size.</p>
+
+<select id="size" onchange="changeSize()">
+    <option value="16px">Small</option>
+    <option value="22px">Medium</option>
+    <option value="30px">Large</option>
+</select>
+
+<script>
+let savedSize = localStorage.getItem("fontSize");
+
+if (savedSize) {
+    document.getElementById("text").style.fontSize = savedSize;
+    document.getElementById("size").value = savedSize;
+}
+
+function changeSize() {
+    let size = document.getElementById("size").value;
+
+    document.getElementById("text").style.fontSize = size;
+    localStorage.setItem("fontSize", size);
+}
+</script>
+
+<br><br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

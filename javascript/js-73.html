@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Selector</title>
+</head>
+<body>
+
+<h2>Query Selector</h2>
+
+<p class="text">Paragraph 1</p>
+<p class="text">Paragraph 2</p>
+
+<button onclick="change()">Change</button>
+
+<script>
+function change() {
+    let first = document.querySelector(".text");
+    first.style.color = "red";
+
+    let all = document.querySelectorAll(".text");
+
+    all.forEach(function(item) {
+        item.style.backgroundColor = "lightyellow";
+    });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retrieve localStorage Data</title>
+</head>
+<body>
+
+<h2>Retrieve Username</h2>
+
+<button onclick="show()">Show Username</button>
+
+<p id="result"></p>
+
+<script>
+function show() {
+
+    let username = localStorage.getItem("username");
+
+    document.getElementById("result").innerHTML =
+        "Username: " + username;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

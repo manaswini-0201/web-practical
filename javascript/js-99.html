@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alert Confirm Prompt</title>
+</head>
+<body>
+
+<h2>Alert, Confirm and Prompt</h2>
+
+<button onclick="showAlert()">Alert</button>
+<button onclick="showConfirm()">Confirm</button>
+<button onclick="showPrompt()">Prompt</button>
+
+<p id="result"></p>
+
+<script>
+function showAlert() {
+    alert("Welcome to JavaScript!");
+}
+
+function showConfirm() {
+    let answer = confirm("Do you like JavaScript?");
+
+    document.getElementById("result").innerHTML =
+        answer ? "You clicked OK." : "You clicked Cancel.";
+}
+
+function showPrompt() {
+    let name = prompt("Enter your name:");
+
+    document.getElementById("result").innerHTML =
+        "Hello " + name;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

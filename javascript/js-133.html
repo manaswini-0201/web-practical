@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recently Viewed Items</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Recently Viewed Items</h2>
+
+<button onclick="viewItem('Laptop')">Laptop</button>
+<button onclick="viewItem('Mobile')">Mobile</button>
+<button onclick="viewItem('Headphones')">Headphones</button>
+
+<h3>Recently Viewed</h3>
+<ul id="recent"></ul>
+
+<script>
+let recent = JSON.parse(localStorage.getItem("recent")) || [];
+
+function viewItem(item) {
+    recent = recent.filter(function(x) {
+        return x != item;
+    });
+
+    recent.unshift(item);
+
+    localStorage.setItem("recent", JSON.stringify(recent));
+    displayRecent();
+}
+
+function displayRecent() {
+    let list = document.getElementById("recent");
+    list.innerHTML = "";
+
+    recent.forEach(function(item) {
+        let li = document.createElement("li");
+        li.innerText = item;
+        list.appendChild(li);
+    });
+}
+
+displayRecent();
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

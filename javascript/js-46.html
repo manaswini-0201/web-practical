@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<input type="text" id="username" placeholder="Username"><br><br>
+<input type="password" id="password" placeholder="Password"><br><br>
+
+<button onclick="login()">Login</button>
+
+<p id="message"></p>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user == "" || pass == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter username and password.";
+    } else {
+        document.getElementById("message").innerHTML =
+            "Login successful!";
+    }
+}
+</script>
+
+</body>
+</html>

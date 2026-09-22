@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise and Async Await</title>
+</head>
+<body>
+
+<h2>Promise Example</h2>
+<p id="output">Loading...</p>
+
+<script>
+function getData() {
+    return new Promise(function(resolve) {
+        setTimeout(function() {
+            resolve("Data received successfully!");
+        }, 2000);
+    });
+}
+
+async function showData() {
+    let result = await getData();
+    document.getElementById("output").innerHTML = result;
+}
+
+showData();
+</script>
+
+</body>
+</html>

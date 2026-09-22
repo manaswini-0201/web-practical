@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+</head>
+<body>
+
+<h1>Registration Validation</h1>
+
+<form onsubmit="return validate()">
+
+    <input id="name" placeholder="Name">
+    <br><br>
+
+    <input id="email" type="email" placeholder="Email">
+    <br><br>
+
+    <input id="phone" placeholder="Phone">
+    <br><br>
+
+    <input id="password" type="password" placeholder="Password">
+    <br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<p id="message"></p>
+
+<script>
+function validate() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let password = document.getElementById("password").value;
+
+    if (name === "" || email === "" ||
+        phone === "" || password === "") {
+
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+
+        return false;
+    }
+
+    if (phone.length !== 10) {
+        document.getElementById("message").innerHTML =
+            "Phone number must contain 10 digits.";
+
+        return false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("message").innerHTML =
+            "Password must contain at least 6 characters.";
+
+        return false;
+    }
+
+    document.getElementById("message").innerHTML =
+        "Registration successful!";
+
+    return false;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

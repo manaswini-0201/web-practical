@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Preference</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h2>Login Preference System</h2>
+
+<input type="text" id="username" placeholder="Enter username">
+<br><br>
+
+<label>
+    <input type="checkbox" id="remember">
+    Remember me
+</label>
+
+<br><br>
+<button onclick="login()">Login</button>
+
+<p id="result"></p>
+
+<script>
+function login() {
+    let username = document.getElementById("username").value;
+    let remember = document.getElementById("remember").checked;
+
+    if (remember) {
+        localStorage.setItem("rememberUser", username);
+    } else {
+        localStorage.removeItem("rememberUser");
+    }
+
+    document.getElementById("result").innerText =
+        "Welcome " + username;
+}
+
+let savedUser = localStorage.getItem("rememberUser");
+
+if (savedUser) {
+    document.getElementById("username").value = savedUser;
+    document.getElementById("remember").checked = true;
+}
+</script>
+
+<br><br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

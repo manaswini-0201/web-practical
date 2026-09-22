@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Form</title>
+</head>
+<body>
+
+<h2>College Admission Form</h2>
+
+<form onsubmit="return admission()">
+
+    Name:
+    <input type="text" id="name">
+    <br><br>
+
+    Email:
+    <input type="email" id="email">
+    <br><br>
+
+    Marks:
+    <input type="number" id="marks">
+    <br><br>
+
+    Course:
+    <select id="course">
+        <option value="">Select Course</option>
+        <option>BCA</option>
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+    </select>
+
+    <br><br>
+
+    <button type="submit">Apply</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+function admission() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let marks = document.getElementById("marks").value;
+    let course = document.getElementById("course").value;
+
+    if (name == "" || email == "" || marks == "" || course == "") {
+        document.getElementById("message").innerHTML =
+            "Please fill all fields.";
+    }
+    else if (marks < 50) {
+        document.getElementById("message").innerHTML =
+            "Minimum 50 marks required.";
+    }
+    else {
+        document.getElementById("message").innerHTML =
+            "Admission form submitted successfully!";
+    }
+
+    return false;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Table</title>
+</head>
+<body>
+
+<h2>Search Students</h2>
+
+<input type="text" id="search"
+       onkeyup="searchTable()"
+       placeholder="Search name">
+
+<table border="1" id="table">
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+    <tr>
+        <td>Lakshmi</td>
+        <td>Computer Science</td>
+    </tr>
+    <tr>
+        <td>Anu</td>
+        <td>AI</td>
+    </tr>
+    <tr>
+        <td>Riya</td>
+        <td>Data Science</td>
+    </tr>
+</table>
+
+<script>
+function searchTable() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let rows = document.querySelectorAll("#table tr");
+
+    for (let i = 1; i < rows.length; i++) {
+        let text = rows[i].innerText.toLowerCase();
+
+        rows[i].style.display =
+            text.includes(input) ? "" : "none";
+    }
+}
+</script>
+
+</body>
+</html>

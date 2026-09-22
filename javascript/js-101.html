@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setInterval</title>
+</head>
+<body>
+
+<h2>setInterval()</h2>
+
+<p id="count">0</p>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+
+<script>
+let number = 0;
+let timer;
+
+function start() {
+
+    timer = setInterval(function() {
+        number++;
+        document.getElementById("count").innerHTML = number;
+    }, 1000);
+}
+
+function stop() {
+    clearInterval(timer);
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

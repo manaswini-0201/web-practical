@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Validation</title>
+</head>
+<body>
+
+<h2>Signup Form</h2>
+
+<form onsubmit="return signup()">
+
+    Username:
+    <input type="text" id="username">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Confirm Password:
+    <input type="password" id="confirm">
+    <br><br>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+<p id="message"></p>
+
+<script>
+function signup() {
+
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
+
+    if (password == "" || confirm == "") {
+        document.getElementById("message").innerHTML =
+            "Please enter both passwords.";
+    }
+    else if (password != confirm) {
+        document.getElementById("message").innerHTML =
+            "Passwords do not match.";
+    }
+    else {
+        document.getElementById("message").innerHTML =
+            "Signup Successful!";
+    }
+
+    return false;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

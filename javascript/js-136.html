@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temporary Form Data</title>
+</head>
+<body style="font-family:Arial;text-align:center;padding:30px;">
+
+<h2>Temporary Form Data</h2>
+
+<input type="text" id="name" placeholder="Enter name">
+<br><br>
+
+<input type="email" id="email" placeholder="Enter email">
+<br><br>
+
+<button onclick="saveData()">Save</button>
+<button onclick="loadData()">Load</button>
+
+<p id="result"></p>
+
+<script>
+function saveData() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    sessionStorage.setItem("name", name);
+    sessionStorage.setItem("email", email);
+
+    document.getElementById("result").innerText =
+        "Form data saved for this session.";
+}
+
+function loadData() {
+    document.getElementById("name").value =
+        sessionStorage.getItem("name") || "";
+
+    document.getElementById("email").value =
+        sessionStorage.getItem("email") || "";
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

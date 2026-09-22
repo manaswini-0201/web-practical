@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notes Application</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 30px;
+        }
+        textarea {
+            width: 300px;
+            height: 120px;
+        }
+        button {
+            padding: 10px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Notes Application</h2>
+
+<textarea id="note" placeholder="Write your note"></textarea><br>
+
+<button onclick="saveNote()">Save Note</button>
+<button onclick="showNote()">Show Note</button>
+
+<p id="result"></p>
+
+<script>
+function saveNote() {
+    let note = document.getElementById("note").value;
+    localStorage.setItem("note", note);
+    alert("Note saved!");
+}
+
+function showNote() {
+    let note = localStorage.getItem("note");
+    document.getElementById("result").innerText = note || "No note found";
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Largest</title>
+</head>
+<body>
+
+<h2>Second Largest Number</h2>
+
+<button onclick="findNumber()">Find</button>
+<p id="output"></p>
+
+<script>
+function findNumber() {
+    let arr = [10, 25, 5, 40, 30];
+
+    arr.sort(function(a, b) {
+        return b - a;
+    });
+
+    document.getElementById("output").innerHTML =
+        "Array: " + arr + "<br>" +
+        "Second Largest: " + arr[1];
+}
+</script>
+
+</body>
+</html>

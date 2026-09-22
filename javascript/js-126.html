@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Record System</title>
+</head>
+<body>
+
+<h2>Student Record</h2>
+
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="course" placeholder="Course">
+
+<br><br>
+
+<button onclick="save()">Save Record</button>
+<button onclick="show()">Show Record</button>
+
+<p id="result"></p>
+
+<script>
+function save() {
+
+    let student = {
+        name: document.getElementById("name").value,
+        course: document.getElementById("course").value
+    };
+
+    localStorage.setItem(
+        "studentRecord",
+        JSON.stringify(student)
+    );
+
+    document.getElementById("result").innerHTML =
+        "Record saved!";
+}
+
+function show() {
+
+    let student = JSON.parse(
+        localStorage.getItem("studentRecord")
+    );
+
+    document.getElementById("result").innerHTML =
+        "Name: " + student.name +
+        "<br>Course: " + student.course;
+}
+</script>
+
+<br>
+<a href="index.html">← JavaScript Programs</a>
+<br><br>
+<a href="../index.html">Home</a>
+
+</body>
+</html>
